@@ -123,7 +123,7 @@ configure(allprojects) { project ->
 
 	test {
 		systemProperty("java.awt.headless", "true")
-		systemProperty("testGroups", project.properties.get("testGroups"))
+
 		scanForTestClasses = false
 		include(["**/*Tests.class", "**/*Test.class"])
 		// Since we set scanForTestClasses to false, we need to filter out inner
@@ -606,14 +606,6 @@ project("spring-jms") {
 	}
 }
 
-project("spring-learn-test") {
-	description = "Spring learn test"
-
-	dependencies {
-		compile(project(":spring-beans"))
-		testCompile group: 'junit', name: 'junit', version: '4.12'
-	}
-}
 
 project("spring-jdbc") {
 	description = "Spring JDBC"

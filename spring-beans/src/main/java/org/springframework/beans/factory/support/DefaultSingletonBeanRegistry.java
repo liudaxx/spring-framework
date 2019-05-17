@@ -484,6 +484,7 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 	 * @param beanName the name of the bean to check
 	 */
 	protected boolean hasDependentBean(String beanName) {
+		//todo Q :什么时候被用上的
 		return this.dependentBeanMap.containsKey(beanName);
 	}
 
